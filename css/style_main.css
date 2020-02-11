@@ -1,0 +1,80 @@
+*{
+	margin:0;
+	padding:0;
+
+}
+
+
+.main_container{
+	
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px 300px 300px 300px 250px;
+	grid-template-areas: 
+		"header"
+		"brand1"
+		"brand2"
+		"brand3"
+		"footer";
+}
+
+
+header {
+	grid-area: header;
+	
+}
+.brand1{
+	grid-area: brand1;
+	border:1px solid black;
+}
+.brand2{
+	grid-area: brand2;
+	border:1px solid black;
+}
+.brand3{
+	grid-area: brand3;
+	border:1px solid black;
+}
+footer {
+	grid-area: footer;
+	border:1px solid black;
+}
+
+header{ 
+	background-color: #272727;
+	color:white;
+	text-align: center;
+	font-size: 25px;
+}
+
+
+
+.brand1{
+	background-image: url(../img/aseopmood.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+@media screen and (min-width: 768px){
+
+	.main_container{
+		
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 300px 300px 250px;
+		grid-gap: 5px;
+		grid-template-areas:
+			"header header"
+			"brand1 brand2"
+			"brand3 brand3"
+			"footer footer";
+	}
+
+
+
+}
+
+
+/*@media screen and (min-width: 960px){
+
+}*/
