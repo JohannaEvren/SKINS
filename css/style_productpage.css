@@ -1,0 +1,76 @@
+*{
+	margin:0;
+	padding:0;
+ }
+
+header {
+	grid-area: header;
+}
+
+.smallercontainer {
+	grid-area: smallcontainer;
+	border:1px solid black;
+}
+
+.image {
+	grid-area: image;
+	border:1px solid black;
+}
+
+.text {
+	grid-area: text;
+	border:1px solid black;
+}
+
+footer {
+	grid-area: footer;
+	border:1px solid black;
+}
+
+header{ 
+	background-color: #272727;
+	color:white;
+	text-align: center;
+	font-size: 25px;
+}
+
+
+.pp_container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px 600px 300px;
+	grid-template-areas: 
+		"header"
+		"smallcontainer"
+		"footer";
+}
+
+.smallercontainer {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 300px 300px;
+	grid-template-areas: 
+		"image"
+		"text";
+
+}
+
+/*
+@media screen and (min-width: 768px){
+    .main_container{
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 100px 300px 300px 250px;
+		grid-gap: 5px;
+		grid-template-areas:
+			"header header"
+			"brand1 brand2"
+			"brand3 brand3"
+			"footer footer";
+	}
+}
+*/
+
+
+/*@media screen and (min-width: 960px){
+
+}*/
