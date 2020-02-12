@@ -3,6 +3,8 @@
 	padding:0;
  }
 
+ /* GRID AREA */
+
 header {
 	grid-area: header;
 }
@@ -27,6 +29,8 @@ footer {
 	border:1px solid black;
 }
 
+/* GRID AREA ENDS */
+
 header{ 
 	background-color: #272727;
 	color:white;
@@ -34,11 +38,64 @@ header{
 	font-size: 25px;
 }
 
+h1 {
+	font-size: 20px;
+	text-align: center;
+	margin-top: 5px;
+}
+
+h2 {
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.text h3 {
+	font-size: 17px;
+	margin: 8px 0 5px 0;
+}
+
+.text p {
+	width: 100%;
+	text-align: justify;
+}
+
+.text p:first-child{
+    margin-top: 10px;
+}
+
+.text {
+	padding: 0 40px 0 10px;
+}
+
+select {
+	background-color: #272727;
+	color: #FFF;
+	border: none;
+	padding: 7px 12px;
+	margin-top: 15px;
+	margin-left: 10px;
+}
+
+button{
+	background-color: #272727;
+	color: #FFF;
+	border: none;
+	padding: 20px 40px;
+	float: right;
+
+}
+
+
+.image img {
+	height: 250px;
+	margin-left: calc(50% - 250px / 2);
+}
 
 .pp_container {
 	display: grid;
 	grid-template-columns: 1fr;
-	grid-template-rows: 100px 600px 300px;
+	grid-template-rows: 100px 600px 200px;
 	grid-template-areas: 
 		"header"
 		"smallcontainer"
@@ -55,22 +112,31 @@ header{
 
 }
 
-/*
+/* IPAD BEHÖVER FÖRMODLIGEN ÄNDRAS */
+
 @media screen and (min-width: 768px){
-    .main_container{
-		grid-template-columns: 1fr 1fr;
-		grid-template-rows: 100px 300px 300px 250px;
-		grid-gap: 5px;
-		grid-template-areas:
-			"header header"
-			"brand1 brand2"
-			"brand3 brand3"
-			"footer footer";
-	}
+    .smallercontainer {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 400px 200px;
+		grid-template-areas: 
+			"image"
+			"text";
+
+    }
 }
-*/
 
+/* DESKTOP*/
 
-/*@media screen and (min-width: 960px){
+@media screen and (min-width: 960px){
+  .smallercontainer {
+	display: grid;
+	width: 80%;
+	margin: 0 auto;
+	grid-template-columns:  1fr 1fr;
+	grid-template-rows: 600px;
+	grid-template-areas: 
+		"image text";
 
-}*/
+}
+}
