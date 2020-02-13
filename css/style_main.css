@@ -37,7 +37,7 @@ footer {grid-area: footer;}
 
 header{ 
 	background-color: #272727;
-	color:white;
+	color:#d9d9d9;
 	text-align: center;
 	padding:25px;
 	font-family: 'Playfair Display', serif;
@@ -46,9 +46,49 @@ header{
 	display: flex;
 	justify-content: space-between;
 	align-items:center;
-
 }
 
+header > a{
+	text-decoration: none;
+	color:#d9d9d9;
+}
+
+.cart{
+	background-color: #272727;
+	position: absolute;
+	left:0;
+	top:-100vh;
+	width: 100vw;
+	height:350px;
+	z-index: 15;
+	transition: top 0.9s;
+	padding:120px 30px 60px 30px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.cart div {
+	font-size: 15px;
+	text-align: left;
+}
+
+.cart div:last-child {margin-left: 67%;}
+
+.line1 {width:100%;}
+
+.line2 {width:100%;}
+
+
+
+
+
+#shoppingc{
+	z-index: 100;
+	cursor: pointer;
+}
 
 /*MENU*/
 
@@ -69,7 +109,7 @@ nav ul a{
 .nav-toggle{
 	width: 40px;
 	height:26px;
-	z-index:20;
+	z-index:14;
 	cursor: pointer;
 	display: block;
 }
@@ -101,47 +141,34 @@ nav ul a{
 
 input[type="checkbox"] {display: none;}
 
-input[type="checkbox"]:checked ~  .menu{right: 0;}
+input[id="toggle"]:checked ~  .menu{right: 0;}
 
-input[type="checkbox"]:checked ~ .nav-toggle span:nth-child(1){
+input[id="cartbutton"]:checked ~ .cart{top: 0;}
+
+
+
+
+input[id="toggle"]:checked ~ .nav-toggle span:nth-child(1){
 	transform:rotate(45deg);
 	background-color: rgba(255,255,255,1);
 }
 
-input[type="checkbox"]:checked ~ .nav-toggle span:nth-child(2){
+input[id="toggle"]:checked ~ .nav-toggle span:nth-child(2){
 	transform:rotate(-45deg);
 	top:-3px;
 	background-color: white;
 }
 
-input[type="checkbox"]:checked ~ .container section,
-input[type="checkbox"]:checked ~ .container header,
-input[type="checkbox"]:checked ~ .container footer
-{
-	margin-bottom:100vh;
-}
-
-
-
-
-
-footer{
-	background-color: #272727;
-}
 
 
 [class*="brand"]{
-	color:white;
 	font-size: 40px;
 }
 
 
 
 .brand1{
-
 	position: relative;
-
-
 }
 
 .brand1::before{
@@ -164,7 +191,7 @@ footer{
 	margin-top: 200px;
 	margin-bottom: -200px;
 	margin-left: 10px;
-	color: white;
+	color:#d9d9d9;
 	z-index: 30;
 }
 
@@ -172,7 +199,6 @@ footer{
 position: relative;
 	
 }
-
 
 .brand2::before{
 	background-image: url(../img/labruketmood.jpeg);
@@ -191,8 +217,6 @@ position: relative;
 
 .brand3{
 	position: relative;
-
-	
 }
 
 .brand3::before{
@@ -211,9 +235,9 @@ position: relative;
 }
 
 [class*="lable"]{
-background-color: rgba(255,255,255,0.5);
-color:black;
-padding:15px;
+	background-color: rgba(217,217,217,0.4);
+	color:black;
+	padding:15px;
 
 }
 
@@ -234,6 +258,11 @@ padding:15px;
 	width:250px;
 	margin-top:170px;
 }
+
+footer{
+	background-color: #272727;
+}
+
 
 
 @media screen and (min-width: 768px){
