@@ -13,9 +13,10 @@ body {
 
 a {
 	text-decoration: none;
-	color: black;
+	color: #000;
 }
 
+/*Searchbar---------------*/
 .searchbar {
   	width: 100%;
   	display: flex;
@@ -111,16 +112,17 @@ footer {
 	background-color: #3E3E3F;
 }
 
-
-
-
-/*Tablets
+/*Tablets*/
 @media screen and (min-width: 768px){
-
-}*/
+	
+	section {
+		width: 33%;
+	}
+}
 
 /*Small desktops*/
 /*@media screen and (min-width: 960px){
+	
 
 }
 
