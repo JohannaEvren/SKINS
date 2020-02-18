@@ -48,7 +48,7 @@ footer {
 .checkout_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100px 50px 250px 100px 130px 240px 200px;
+	grid-template-rows: 100px 70px 250px 100px 130px 240px 200px;
 	grid-template-areas: 
 		"header header"
 		"top top"
@@ -66,8 +66,8 @@ footer {
 	grid-template-areas: 
 		"name"
 		"quantity";
-
 }
+
 /* GRID AREA ENDS */
 
 header{ 
@@ -229,10 +229,126 @@ footer a:hover {
 
 .icons {
     position: absolute;
-	right: 10px;
-	margin-top: 10px;
-	
+	right: 10px;	
 }
 
+/* IPAD */
+
+@media screen and (min-width: 768px){
+    
+    .checkout_container {
+		grid-template-rows: 100px 70px 250px 100px 150px 200px;
+		grid-template-areas: 
+			"header header"
+			"top top"
+			"img container2"
+			"signin shipping"
+			"submit submit"
+			"footer footer";
+    }
+
+    img.img{
+    	margin-left: 30%;
+    }
+
+    .name h2 {
+    	font-size: 17px;
+    }
+
+    .quantity p {
+    	word-spacing: 190px;
+    }
+
+    .shipping {
+    	padding-left: 0;
+    	padding-right: 20%;
+    }
+
+    .signin {
+    	padding-left: 20%;
+    }
+
+    .signin h2 {
+    	font-size: 15px;
+    }
+
+    .submit {
+    	margin-left: 10%;
+    }
+
+    footer h5:before {
+	    width: 45%;
+    }
+ 
+    footer h5:after {
+	    width: 45%;
+    }
+}
+
+/* DESKTOP*/
+
+@media screen and (min-width: 960px){
+
+	.checkout_container {
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-rows: 100px 100px 120px 200px 250px 200px;
+		grid-template-areas: 
+			"header header header"
+			"top top top"
+			"img container2 signin"
+			"img container2 submit"
+			"shipping shipping ."
+			"footer footer footer";
+    }
+
+    .checkout_container img {
+	    height: 250px;
+	    padding-top: 0;
+    }
+
+    .name {
+    	padding-top: 0;
+    }
+
+    select {
+    	width: 150px;
+    	margin-top: 30px;
+    }
+
+    .quantity p {
+    	word-spacing: 90px;
+    }
+
+    .signin {
+    	padding-left: 0;
+    }
+
+    .submit {
+    	margin-left: 0;
+    	margin-top: 30px;
+    }
+
+    .submit input {
+    	height: 50px;
+    	width: 250px;
+    }
+
+    .shipping {
+    	padding: 30px 20% 30px 22%;
+    	font-size: 15px;
+    }
+
+    button:hover {
+   	    opacity: 0.6;
+   	    transition: 0.2s;
+    }
+
+    footer h5:before {
+	    width: 47%;
+    }
+ 
+    footer h5:after {
+	    width: 47%;
+    }
 
 
