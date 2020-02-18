@@ -185,9 +185,6 @@ footer h5:after {
 
 footer {
 	background-color: rgba(39, 39, 39, 1);
-	/* TVEKSAM
-	background-image: url('../img/stone.jpg');
-	*/ 
 	border: none;
 }
 
@@ -311,6 +308,7 @@ footer a:hover {
     	display: block;
     	margin-top: 20px;
     	background-color: #d9d9d9;
+    	width: 450px;
     }
 
     .text {
