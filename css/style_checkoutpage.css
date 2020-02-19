@@ -41,6 +41,10 @@ header {
 	grid-area: submit;
 }
 
+.othersbuy {
+	grid-area: others;
+}
+
 footer {
 	grid-area: footer;
 }
@@ -48,13 +52,14 @@ footer {
 .checkout_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100px 70px 250px 100px 130px 240px 200px;
+	grid-template-rows: 100px 70px 250px 100px 130px 600px 250px 200px;
 	grid-template-areas: 
 		"header header"
 		"top top"
 		"img container2"
 		"signin signin"
 		"submit ."
+		"others others"
 		"shipping shipping"
 		"footer footer";
 }
@@ -69,6 +74,40 @@ footer {
 }
 
 /* GRID AREA ENDS */
+
+/* FLEXBOX*/
+
+.othersbuy {
+	display: flex;
+	flex-flow: row wrap;
+	width: 100%;
+	justify-content: space-around;
+
+}
+
+.othersbuy h4{
+     height: 20px;
+     width: 100%;
+     text-align: center;
+     font-size: 15px;
+}
+
+.byr1, .byr2, .la1, .la2{
+    flex-basis: 35%;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.othersbuy a {
+	text-decoration: none;
+	color: #000;
+	font-size: 13px;
+}
+
+/* FLEXBOX ENDS */
+
 
 header{ 
 	background-color: #272727;
@@ -96,6 +135,7 @@ h1 {
     font-size: 14px;
     padding-top: 5px;
     padding-right: 60px;
+    font-weight: normal;
 }
 
 .name h2:first-child {
@@ -160,12 +200,17 @@ label {
 }
 
 .shipping {
-	padding: 0 12%;
-	font-size: 12px;
+	padding: 0 10%;
+	font-size: 15px;
 }
 
 .shipping h3 {
 	margin-bottom: 10px;
+	font-size: 15px;
+}
+
+.othersbuy img {
+	height: 100px;
 }
 
 footer h5 {
@@ -237,13 +282,14 @@ footer a:hover {
 @media screen and (min-width: 768px){
     
     .checkout_container {
-		grid-template-rows: 100px 70px 250px 100px 150px 200px;
+		grid-template-rows: 100px 70px 250px 100px 150px 600px 200px;
 		grid-template-areas: 
 			"header header"
 			"top top"
 			"img container2"
 			"signin shipping"
 			"submit submit"
+			"others others"
 			"footer footer";
     }
 
@@ -274,6 +320,15 @@ footer a:hover {
 
     .submit {
     	margin-left: 10%;
+    }
+
+    .othersbuy {
+		width: 80%;
+		margin-left: calc(55% - 80% / 2)
+    }
+
+    .othersbuy h4 {
+    	margin-right: 5%;
     }
 
     footer h5:before {
@@ -336,6 +391,10 @@ footer a:hover {
     .shipping {
     	padding: 30px 20% 30px 22%;
     	font-size: 15px;
+    }
+
+    .icons img {
+	    height: 30px;
     }
 
     button:hover {
