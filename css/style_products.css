@@ -5,6 +5,8 @@
 
 body {
 	color: #000;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
 }
 
 a {
@@ -12,10 +14,12 @@ a {
 	color: #000;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
 /*GRID AREA*/
 .product_container {
 	display: grid;
-	width: 100%;*/
+	/*width: 100%;*/
 	/*height: 100vh; /*tidigare auto*/
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: 7% 4% auto auto auto auto auto auto 10%;
@@ -109,6 +113,14 @@ footer {
 
 /*FLEX BOX AREA*/
 /*SEARCHBAR*/
+.wrap {
+	background-color: #FBF8FE;
+	padding: 5px 0;
+  	width: 100%;
+  	height: 38px;
+	margin: 0 auto;
+}
+
 .searchbar {
 	display: flex;
   	width: 100%;
@@ -147,14 +159,6 @@ footer {
   	background: #1D1D1D;
 }
 
-.wrap {
-	background-color: #FBF8FE;
-	padding: 5px 0;
-  	width: 100%;
-  	height: 38px;
-	margin: 0 auto;
-}
-
 /*PRODUCT MENU*/
 
 /*PRODUCT GALLERY*/
@@ -162,7 +166,7 @@ img.product_img {
 	width: 100%;
 	height: auto;
 	transform: scale(0.7);
-	transition: transform .1s;
+	transition: transform .5s;
 }
 
 img.product_img:hover {
@@ -197,25 +201,70 @@ img.product_img:hover {
 			"sidemenu aesop1 aesop2 aesop3 aesop4"
 			"footer footer footer footer footer";
 	}
-
+	
+	/*SIDE MENU*/
 	aside {
 		display: grid;
 		min-height: 100px;
+		max-width: 200px;
 		width: 100%;
 		height: 400px;
-		padding: 0;
-		margin-top: 12px;
+		padding: 0 0 0 10px;
+		margin-top: 5px;
 		background-color: #FBF8FE;
+	}
+
+	aside h2, .list {
+		text-transform: uppercase;
 	}
 
 	aside h2 {
 		padding: 0 10px 0 10px;
 		color: #000;
 		text-align: left;
+		font-style: normal;
 	}
 
-	.brand {
-		border: 1px solid #B9B7BA;
+	.side_navigation {
+	  	width: 300px;
+	}
+
+	.side_menu, .sub_menu {
+	  	list-style: none;
+	}
+
+	.side_menu a {
+	  	display: block;
+	  	background-color: #FBF8FE;
+	  	text-decoration: none;
+	  	padding: 10px;
+	  	color: #000;
+	  	font-size: 13px;
+	  	text-transform: uppercase;
+	}
+
+	.side_menu a:hover {
+	    background-color: #ccc;
+	}
+
+	.side_menu li:hover .sub_menu {
+	  	display: block;
+	  	max-height: 200px;
+	}
+
+	.sub_menu {
+		max-height: 0;
+	  	overflow: hidden;
+	  	font-size: 13px;
+	  	-webkit-transition: all 1.0s ease-out;
+	}
+
+	.sub_menu a {
+	  	background-color: #DEDCE0;
+	}
+
+	.sub_menu a:hover {
+	  	background-color: #959396;
 	}
 }
 
@@ -231,26 +280,6 @@ img.product_img:hover {
 		"sidemenu labruket1 labruket2 labruket3 labruket4"
 		"sidemenu aesop1 aesop2 aesop3 aesop4"
 		"footer footer footer footer footer";
-	}
-
-	aside {
-		display: grid;
-		min-height: 100px;
-		width: 100%;
-		height: 400px;
-		padding: 0;
-		margin-top: 12px;
-		background-color: #FBF8FE;
-	}
-
-	aside h2 {
-		padding: 0 10px 0 10px;
-		color: #000;
-		text-align: left;
-	}
-
-	.brand {
-		border: 1px solid #B9B7BA;
 	}
 }
 
