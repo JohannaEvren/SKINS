@@ -52,7 +52,7 @@ footer {
 .checkout_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 100px 70px 250px 100px 130px 600px 250px 200px;
+	grid-template-rows: 100px 70px 250px 100px 130px 550px 250px 200px;
 	grid-template-areas: 
 		"header header"
 		"top top"
@@ -77,12 +77,17 @@ footer {
 
 /* FLEXBOX*/
 
-.othersbuy {
+.otherproducts {
 	display: flex;
 	flex-flow: row wrap;
 	width: 100%;
 	justify-content: space-around;
+	margin-top: 20px;
 
+}
+
+.otherproducts img {
+	margin-bottom: 20px;
 }
 
 .othersbuy h4{
@@ -105,6 +110,7 @@ footer {
 	color: #000;
 	font-size: 13px;
 }
+
 
 /* FLEXBOX ENDS */
 
@@ -322,9 +328,9 @@ footer a:hover {
     	margin-left: 10%;
     }
 
-    .othersbuy {
-		width: 80%;
-		margin-left: calc(55% - 80% / 2)
+    .otherproducts {
+    	width: 80%;
+		margin-left: calc(55% - 80% / 2);
     }
 
     .othersbuy h4 {
@@ -346,12 +352,13 @@ footer a:hover {
 
 	.checkout_container {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 100px 100px 120px 200px 250px 200px;
+		grid-template-rows: 100px 100px 120px 260px 300px 250px 200px;
 		grid-template-areas: 
 			"header header header"
 			"top top top"
 			"img container2 signin"
 			"img container2 submit"
+			"others others others"
 			"shipping shipping ."
 			"footer footer footer";
     }
@@ -386,6 +393,33 @@ footer a:hover {
     .submit input {
     	height: 50px;
     	width: 250px;
+    }
+
+    .otherproducts {
+		flex-flow: nowrap;
+		margin-left: 15%;
+		justify-content: flex-start;
+
+    }
+
+    .othersbuy h4 {
+	     text-align: left;
+	     margin-left: 15%;
+	     width: 200px;
+	     margin-bottom: 30px;
+    }
+
+    .othersbuy img {
+    	height: 100px;
+    }
+
+    .othersbuy img:hover {
+        transform: scale(1.2);
+    	transition: 0.2s;
+    }
+
+    .byr1, .byr2, .la1, .la2{
+        flex-basis: 20%;
     }
 
     .shipping {
