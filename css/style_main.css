@@ -190,6 +190,72 @@ input[id="toggle"]:checked ~ .nav-toggle span:nth-child(2) {
 	}
 }
 
+/*FOOTER--------------------*/
+footer h5 {
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    font-size: 17px;
+}
+
+footer h5:before {
+	content: "";
+	display: block;
+	width: 35%;
+	height: 1.2px;
+	background-color: #d9d9d9;
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+
+footer h5:after {
+	content: "";
+	display: block;
+	width: 35%;
+	height: 1.2px;
+	background-color: #d9d9d9;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+
+footer {
+	background-color: rgba(39, 39, 39, 1);
+	border: none;
+}
+
+footer p {
+	padding: 20px 0 0 10px;
+	font-size: 18px;
+}
+
+footer a {
+	text-decoration: none;
+	color: #d9d9d9;
+	transition: 0.2s;
+}
+
+footer a:hover {
+	color: #FFF;
+}
+
+.icons img {
+	height: 30px;
+	padding-left: 5px;
+}
+
+.icons img:hover {
+	opacity: 0.6;
+	transition: 0.2s;
+}
+
+.icons {
+    position: absolute;
+	right: 10px;
+	margin-top: 10px;
+	
+}
 /*TABLET*/
 @media only screen and (max-width: 959px) and (min-width: 768px) {
 	.main_container {
