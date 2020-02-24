@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
-
 *{
 	margin:0;
 	padding:0;
  }
 
  /* GRID AREA */
+
+header {
+	grid-area: header;
+}
 
 .top {
 	grid-area: top;
@@ -43,17 +45,23 @@
 	grid-area: others;
 }
 
+footer {
+	grid-area: footer;
+}
+
 .checkout_container {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 70px 250px 100px 130px 550px 250px;
+	grid-template-rows: 100px 70px 250px 100px 130px 550px 250px 200px;
 	grid-template-areas: 
+		"header header"
 		"top top"
 		"img container2"
 		"signin signin"
 		"submit ."
 		"others others"
-		"shipping shipping";
+		"shipping shipping"
+		"footer footer";
 }
 
 .container2 {
@@ -87,7 +95,6 @@
      width: 100%;
      text-align: center;
      font-size: 15px;
-     font-family: 'Roboto', sans-serif;
 }
 
 .byr1, .byr2, .la1, .la2{
@@ -107,16 +114,18 @@
 
 /* FLEXBOX ENDS */
 
-body {
-	background-color: #FFF;
+
+header{ 
+	background-color: #272727;
+	color:white;
+	text-align: center;
+	font-size: 25px;
 }
 
 h1 {
 	font-size: 25px;
 	text-align: center;
 	padding: 20px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: lighter;
 }
 
 .checkout_container img {
@@ -133,8 +142,6 @@ h1 {
     padding-top: 5px;
     padding-right: 60px;
     font-weight: normal;
-    font-family: 'Roboto', sans-serif;
-    font-weight: lighter;
 }
 
 .name h2:first-child {
@@ -185,7 +192,7 @@ label {
 }
 
 .submit {
-	margin-left: 29%;
+	margin-left: 27%;
 }
 
 .submit input {
@@ -206,31 +213,90 @@ label {
 .shipping h3 {
 	margin-bottom: 10px;
 	font-size: 15px;
-	font-family: 'Roboto', sans-serif;
-	font-weight: lighter;
 }
 
 .othersbuy img {
 	height: 100px;
 }
 
-footer {
-	height: 200px;
+footer h5 {
+    position: relative;
+    color: #FFF;
+    text-align: center;
+    font-size: 17px;
 }
 
+footer h5:before {
+	content: "";
+	display: block;
+	width: 35%;
+	height: 1.2px;
+	background-color: #d9d9d9;
+	position: absolute;
+	left: 0;
+	top: 50%;
+}
+
+footer h5:after {
+	content: "";
+	display: block;
+	width: 35%;
+	height: 1.2px;
+	background-color: #d9d9d9;
+	position: absolute;
+	right: 0;
+	top: 50%;
+}
+
+footer {
+	background-color: rgba(39, 39, 39, 1);
+	border: none;
+}
+
+footer p {
+	padding: 20px 0 0 10px;
+	font-size: 18px;
+}
+
+footer a {
+	text-decoration: none;
+	color: #d9d9d9;
+	transition: 0.2s;
+}
+
+footer a:hover {
+	color: #FFF;
+}
+
+.icons img {
+	height: 30px;
+	padding-left: 5px;
+}
+
+.icons img:hover {
+	opacity: 0.6;
+	transition: 0.2s;
+}
+
+.icons {
+    position: absolute;
+	right: 10px;	
+}
 
 /* IPAD */
 
 @media screen and (min-width: 768px){
     
     .checkout_container {
-		grid-template-rows: 70px 250px 100px 150px 600px;
+		grid-template-rows: 100px 70px 250px 100px 150px 600px 200px;
 		grid-template-areas: 
+			"header header"
 			"top top"
 			"img container2"
 			"signin shipping"
 			"submit submit"
-			"others others";
+			"others others"
+			"footer footer";
     }
 
     img.img{
@@ -248,7 +314,6 @@ footer {
     .shipping {
     	padding-left: 0;
     	padding-right: 20%;
-    	margin-top: 20px;
     }
 
     .signin {
@@ -272,6 +337,13 @@ footer {
     	margin-right: 5%;
     }
 
+    footer h5:before {
+	    width: 45%;
+    }
+ 
+    footer h5:after {
+	    width: 45%;
+    }
 }
 
 /* DESKTOP*/
@@ -280,22 +352,20 @@ footer {
 
 	.checkout_container {
 		grid-template-columns: 1fr 1fr 1fr;
-		grid-template-rows: 150px 120px 260px 300px 250px;
+		grid-template-rows: 100px 100px 120px 260px 300px 250px 200px;
 		grid-template-areas: 
+			"header header header"
 			"top top top"
 			"img container2 signin"
 			"img container2 submit"
 			"others others others"
-			"shipping shipping .";
+			"shipping shipping ."
+			"footer footer footer";
     }
 
     .checkout_container img {
 	    height: 250px;
 	    padding-top: 0;
-    }
-
-    h1.top {
-    	align-self: center;
     }
 
     .name {
@@ -313,10 +383,6 @@ footer {
 
     .signin {
     	padding-left: 0;
-    }
-
-    .signin input {
-    	height: 35px;
     }
 
     .submit {
@@ -369,5 +435,11 @@ footer {
    	    opacity: 0.6;
    	    transition: 0.2s;
     }
-}
 
+    footer h5:before {
+	    width: 47%;
+    }
+ 
+    footer h5:after {
+	    width: 47%;
+    }
