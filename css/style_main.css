@@ -170,8 +170,6 @@ input[id="toggle"]:checked ~ .nav-toggle span:nth-child(2) {
 
 /*PAGE CONTENT---------------*/
 
-
-
 /*IPHONE X*/
 @media only screen 
     and (device-width : 375px) 
