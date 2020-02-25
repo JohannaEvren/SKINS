@@ -150,6 +150,8 @@ h1 {
 	margin-top: 10px;
 	font-size: 12px;
 	word-spacing: 42px;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 select {
@@ -167,8 +169,13 @@ select:focus input:focus {
     padding-left: 15%;
 }
 
-.signin h2{
+.signin h2, label {
     font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.signin h2 {
+    font-weight: lighter;
 }
 
 .signin input {
@@ -178,10 +185,6 @@ select:focus input:focus {
     border: none;
     margin-top: 10px;
     color: #FFF;
-}
-
-label {
-	font-size: 10px;
 }
 
 .submit {
@@ -200,7 +203,8 @@ label {
 
 .shipping {
 	padding: 0 10%;
-	font-size: 15px;
+	font-size: 13px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .shipping h3 {
@@ -253,10 +257,6 @@ footer {
 
     .signin {
     	padding-left: 20%;
-    }
-
-    .signin h2 {
-    	font-size: 15px;
     }
 
     .submit {

@@ -91,7 +91,10 @@ header > a {
 .cart_text2 {width:100%;}
 
 button {
-	
+	background-color: #272727;
+	color:#FFF;
+	border: 1px solid #FFF;
+	padding: 5px;
 }
 
 #shoppingcart {
@@ -102,6 +105,10 @@ button {
 .logo {
 	position: relative;
 	top: -5px;
+}
+
+.cart img {
+	height: 60px;
 }
 
 /*HAMBURGER TOGGLE---------------*/
