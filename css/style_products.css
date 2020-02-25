@@ -3,12 +3,10 @@
 	padding: 0;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
-
 body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 11px;
-    width: 100%;
+	color: #000;
+	font-family: 'Lato', sans-serif;
+	font-size: 12px;
 }
 
 a {
@@ -16,11 +14,117 @@ a {
 	color: #000;
 }
 
-/*Searchbar---------------*/
-.searchbar {
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+
+/*GRID AREA*/
+.product_container {
+	display: grid;
+	/*width: 100%;*/
+	/*height: 100vh; /*tidigare auto*/
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 7% 4% auto auto auto auto auto auto 10%;
+	grid-template-areas: 
+		"header header"
+		"searchbar searchbar"
+		"byredo1 byredo2"
+		"byredo3 byredo4"
+		"labruket1 labruket2"
+		"labruket3 labruket4"
+		"aesop1 aesop2"
+		"aesop3 aesop4"
+		"footer footer";
+}
+
+header {
+	grid-area: header;
+	background-color: #3C3836;
+	text-align: center;
+}
+
+.wrap {
+	grid-area: searchbar;
+}
+
+aside {
+	grid-area: sidemenu;
+	display: none;
+}
+
+.byredo1 {
+	grid-area: byredo1;
+}
+
+.byredo2 {
+	grid-area: byredo2;
+}
+
+.byredo3 {
+	grid-area: byredo3;
+}
+
+.byredo4 {
+	grid-area: byredo4;
+}
+
+[class*="byredo"],
+[class*="labruket"], 
+[class*="aesop"] {
+	margin: auto 10px;
+}
+
+.labruket1 {
+	grid-area: labruket1;
+}
+
+.labruket2 {
+	grid-area: labruket2;
+}
+
+.labruket3 {
+	grid-area: labruket3;
+}
+
+.labruket4 {
+	grid-area: labruket4;
+}
+
+.aesop1 {
+	grid-area: aesop1;
+}
+
+.aesop2 {
+	grid-area: aesop2;
+}
+
+.aesop3 {
+	grid-area: aesop3;
+}
+
+.aesop4 {
+	grid-area: aesop4;
+}
+
+footer {
+	grid-area: footer;
+	background-color: #3C3836;
+	text-align: center;
+	margin-top: 40px;
+}
+
+/*FLEX BOX AREA*/
+/*SEARCHBAR*/
+.wrap {
+	background-color: #FBF8FE;
+	padding: 5px 0;
   	width: 100%;
-  	display: flex;
-  	margin: auto;
+  	height: 38px;
+	margin: 0 auto;
+}
+
+.searchbar {
+	display: flex;
+  	width: 100%;
+  	margin: 0 auto;
   	max-width: 500px;
 }
 
@@ -55,36 +159,14 @@ a {
   	background: #1D1D1D;
 }
 
-/*Resize the wrap to see the search bar change!*/
-.wrap {
-	background-color: #FBF8FE;
-	padding: 5px;
-  	width: 100%;
-	margin: 0 auto;
-}
+/*PRODUCT MENU*/
 
-header {
-	width: 100%;
-	height:100px;
-}
-
-.products_container {
-	display: flex;
-	flex-flow: row wrap;
-}
-
-section {
-	width: 50%;
-	height: 300px;
-	text-align: center;
-	padding: 20px 0 5px 0;
-}
-
+/*PRODUCT GALLERY*/
 img.product_img {
 	width: 100%;
 	height: auto;
 	transform: scale(0.7);
-	transition: transform .1s;
+	transition: transform .5s;
 }
 
 img.product_img:hover {
@@ -105,43 +187,101 @@ img.product_img:hover {
 	padding: 3px;
 }
 
-footer {
-	margin: 150px 0 0 0;
-	width: 100%;
-	height: 200px;
-	background-color: #3E3E3F;
-}
-
-/*Tablets*/
-@media screen and (min-width: 768px){
+/*TABLET*/
+@media screen and (min-width: 768px) {
 	
-	section {
-		width: 33%;
+	.product_container {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 7% 4% auto auto auto 10%;
+		grid-template-areas: 
+			"header header header header header"
+			"searchbar searchbar searchbar searchbar searchbar"
+			"sidemenu byredo1 byredo2 byredo3 byredo4"
+			"sidemenu labruket1 labruket2 labruket3 labruket4"
+			"sidemenu aesop1 aesop2 aesop3 aesop4"
+			"footer footer footer footer footer";
+	}
+	
+	/*SIDE MENU*/
+	aside {
+		display: grid;
+		min-height: 100px;
+		max-width: 200px;
+		width: 100%;
+		height: 400px;
+		padding: 0 0 0 10px;
+		margin-top: 5px;
+		background-color: #FBF8FE;
+	}
+
+	aside h2, .list {
+		text-transform: uppercase;
+	}
+
+	aside h2 {
+		padding: 0 10px 0 10px;
+		color: #000;
+		text-align: left;
+		font-style: normal;
+	}
+
+	.side_navigation {
+	  	width: 300px;
+	}
+
+	.side_menu, .sub_menu {
+	  	list-style: none;
+	}
+
+	.side_menu a {
+	  	display: block;
+	  	background-color: #FBF8FE;
+	  	text-decoration: none;
+	  	padding: 10px;
+	  	color: #000;
+	  	font-size: 13px;
+	  	text-transform: uppercase;
+	}
+
+	.side_menu a:hover {
+	    background-color: #ccc;
+	}
+
+	.side_menu li:hover .sub_menu {
+	  	display: block;
+	  	max-height: 200px;
+	}
+
+	.sub_menu {
+		max-height: 0;
+	  	overflow: hidden;
+	  	font-size: 13px;
+	  	-webkit-transition: all 1.0s ease-out;
+	}
+
+	.sub_menu a {
+	  	background-color: #DEDCE0;
+	}
+
+	.sub_menu a:hover {
+	  	background-color: #959396;
 	}
 }
 
-/*Small desktops*/
-/*@media screen and (min-width: 960px){
-	
-
+/*DESKTOP*/
+@media screen and (min-width: 960px) {
+	.product_container {
+		grid-template-columns: repeat(5, 1fr);
+		grid-template-rows: 7% 4% auto auto auto auto 10%;
+		grid-template-areas:
+		"header header header header header"
+		"searchbar searchbar searchbar searchbar searchbar"
+		"sidemenu byredo1 byredo2 byredo3 byredo4"
+		"sidemenu labruket1 labruket2 labruket3 labruket4"
+		"sidemenu aesop1 aesop2 aesop3 aesop4"
+		"footer footer footer footer footer";
+	}
 }
-
-/*Large desktops*/
-/*@media screen and (min-width: 1200px){
-
-}*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
