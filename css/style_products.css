@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
 
 * {
     margin: 0;
@@ -8,9 +8,14 @@
 
 body {
     color: #000;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', ;
     font-size: 12px;
 }
+
+h2 {
+    font-family: 'Roboto', ;
+}
+
 
 a {
     text-decoration: none;
@@ -239,9 +244,5 @@ footer {
 
 /*LARGE SCREEN---------------*/
 @media screen and (min-width: 1200px) {
-    .nav-category {
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-gap: 16px;
-    }
+    
 }
