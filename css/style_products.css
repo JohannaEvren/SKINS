@@ -239,9 +239,5 @@ footer {
 
 /*LARGE SCREEN---------------*/
 @media screen and (min-width: 1200px) {
-    .nav-category {
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-        grid-gap: 16px;
-    }
+    
 }
