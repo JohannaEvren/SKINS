@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 }
 
 body {
-    font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
-    color: #fff;
-    padding: 50px 0;
+    font-family: 'Lato', ;
+}
+
+h2 {
+    font-family: 'Roboto', ;
+    margin: 40px 0 30px 0;
+    text-align: center;
+}
+
+footer {
+    margin-top: 50px;
+    height: 200px;
 }
 
 .container {
@@ -19,18 +30,18 @@ body {
     box-sizing: border-box;
 }
 
-.flex-outer,
+.flex-container,
 .flex-inner {
     list-style-type: none;
     padding: 0;
 }
 
-.flex-outer {
+.flex-container {
     max-width: 800px;
     margin: 0 auto;
 }
 
-.flex-outer li,
+.flex-container li,
 .flex-inner {
     display: flex;
     flex-wrap: wrap;
@@ -41,58 +52,92 @@ label {
     color: #000;
     font-size: 12px;
 }
+
 input {
     background-color: #272727;
     color: #fff;
 }
-.flex-inner {
-    padding: 0 8px;
-    justify-content: space-between;  
-}
 
-.flex-outer > li:not(:last-child) {
+.flex-container > li:not(:last-child) {
     margin-bottom: 20px;
 }
 
-.flex-outer li label,
-.flex-outer li p {
+.flex-container li label,
+.flex-container li p {
     padding: 8px;
     font-weight: 300;
-    letter-spacing: .09em;
+    letter-spacing: 2px;
+    padding: 8px;
 }
 
-.flex-outer > li > label,
-.flex-outer li p {
+.flex-container > li > label,
+.flex-container li p {
     flex: 1 0 120px;
     max-width: 220px;
 }
 
-.flex-outer > li > label + *,
+.flex-container > li > label + *,
 .flex-inner {
     flex: 1 0 220px;
 }
 
-.flex-outer li p {
+.flex-container li p {
     margin: 0;
 }
 
-.flex-outer li input:not([type='checkbox']),
-.flex-outer li textarea {
+.flex-container li input:not([type='checkbox']),
+.flex-container li textarea {
     padding: 15px;
     border: none;
 }
 
-.flex-outer li button {
-    margin-left: auto;
-    padding: 8px 16px;
+.flex-container input:focus, 
+.flex-container textarea:focus, 
+.flex-container select:focus {
+    outline-offset: 0 !important;
+    outline: none !important;
+}
+
+.flex-container li button {
+    margin: 20px auto;
+    padding: 15px 16px;
     border: none;
-    background: #333;
-    color: #f2f2f2;
+    background-color: #272727;
+    color: #ccc;
     text-transform: uppercase;
     letter-spacing: .09em;
     border-radius: 2px;
 }
 
+.flex-container li button:hover {
+    background-color: #373738;
+}
+
+.flex-inner {
+    display: flex;
+    padding: 0 10px;
+    justify-content: space-between;  
+}
+
+.flex-inner input[type='checkbox'] {
+    display: flex;
+    width: 100%;
+}
+
+#agreE {
+    width: 20%;
+}
+
+.flex-inner label {
+    width: 100%;
+
+}
+
 .flex-inner li {
     width: 100px;
+}
+
+#countrY {
+    background-color: #272727;
+    color: #fff;
 }

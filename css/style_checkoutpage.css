@@ -154,6 +154,10 @@ h1 {
 
 }
 
+.shipping p {
+    font-family: 'Lato', sans-serif;
+}
+
 select {
 	width: 65%;
 	background-color: #272727;
